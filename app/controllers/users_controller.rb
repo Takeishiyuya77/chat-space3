@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :set_group
   def edit
   end
 
@@ -15,4 +16,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email)
   end
+
 end
